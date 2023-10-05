@@ -2,7 +2,7 @@
 #include <WiFiClient.h>
 
 const char *ssid = "Red_Mi";
-const char *password = "12345678";
+const char *password = "hstsv353WweST3F";
 const char *esclavoIP = "192.168.4.2"; // Dirección IP del módulo esclavo en la red generada
 
 void setup()

@@ -2,7 +2,7 @@
 #include <WiFiClient.h>
 
 const char *ssid = "Red_Mi";
-const char *password = "12345678";
+const char *password = "hstsv353WweST3F";
 WiFiServer server(9600);
 
 void setup()
