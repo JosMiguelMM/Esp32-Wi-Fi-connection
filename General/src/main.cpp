@@ -23,16 +23,22 @@ void loop()
   // Conectar con el módulo esclavo
   if (client.connect(esclavoIP, 9600))
   {
+  conec:
     Serial.println("Conexión con el módulo esclavo establecida.");
 
     // Enviar un mensaje al módulo esclavo
     client.println("Hola desde el maestro");
+    delay(1000);
+    client.println("Mejore la logica");
+    delay(1000);
+
+
 
     // Esperar una respuesta del esclavo (opcional)
-    // while (client.available() == 0);
-    // String respuesta = client.readStringUntil('\n');
-    // Serial.println("Respuesta del esclavo: " + respuesta);
-
+     while (client.available() == 0);
+     String respuesta = client.readStringUntil('\n');
+     Serial.println("Respuesta" + respuesta);
+    goto conec;
     client.stop(); // Cierra la conexión
   }
   else

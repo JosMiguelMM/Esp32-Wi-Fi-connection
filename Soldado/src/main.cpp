@@ -35,12 +35,15 @@ void loop()
       if (client.available())
       {
         String mensaje = client.readStringUntil('\n');
+        delay(500);
+        String mensaje2 = client.readStringUntil('\n');
+        delay(500);
         Serial.println("Mensaje recibido del maestro: " + mensaje);
-
+        Serial.println("Mensaje recibido del maestro: " + mensaje2);
         // Aquí puedes realizar alguna acción en respuesta al mensaje recibido
 
         // Envía una respuesta al maestro (opcional)
-        // client.println("Respuesta desde el esclavo");
+         client.println("Respuesta desde el esclavo");
       }
     }
     goto regreso;
